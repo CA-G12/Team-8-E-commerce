@@ -201,6 +201,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 
 .form-section.close {
@@ -248,6 +249,23 @@ select {
 
 select {
   height: 7vh;
+}
+
+.add-product {
+  width: 8rem;
+  height: 3rem;
+  border: none;
+  background-color: var(--forth);
+  color: var(--main);
+  box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 5%);
+  opacity: 0.8;
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+.add-product:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 15%);
 }
 
 /* Ending the styles for the desktop screens */
