@@ -187,6 +187,65 @@ body {
   opacity: 1;
   box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 15%);
 }
+
+.form-section {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 235, 230, 0.7);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-section i {
+  color: white;
+  align-self: flex-end;
+  font-size: xx-large;
+  color: var(--third);
+}
+
+.form-section form {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--third);
+}
+
+.form-section form label {
+  width: 100%;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-weight: bold;
+}
+
+.form-section form label input,
+select {
+  font-weight: normal;
+  width: 50%;
+  height: 5vh;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--main);
+  color: var(--third);
+}
+
+select {
+  height: 7vh;
+}
+
 /* Ending the styles for the desktop screens */
 
 /* Starting the styles for the mobile screens */
