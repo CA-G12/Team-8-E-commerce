@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Imprima&family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font awesome library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="./seller.css" />
     <title>Impresso Store</title>
   </head>
@@ -145,6 +150,58 @@
             </div>
           </section>
         </sections>
+        <section class="form-section">
+          <i class="fa-solid fa-rectangle-xmark"></i>
+          <form>
+            <h1 class="title">Add Product</h1>
+            <label for="name">
+              Product Name:
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Add Product Name ..."
+              />
+            </label>
+            <label for="details">
+              Product Details:
+              <input
+                type="text"
+                name="details"
+                id="details"
+                placeholder="Add Product Details ..."
+              />
+            </label>
+            <label for="price">
+              Product Price:
+              <input
+                type="number"
+                name="price"
+                id="price"
+                placeholder="Add Product Price ..."
+              />
+            </label>
+            <label for="link">
+              Product Image:
+              <input
+                type="text"
+                name="link"
+                id="link"
+                placeholder="Add Product Image Link ..."
+              />
+            </label>
+            <label for="category">
+              Select a Category:
+              <select name="category" id="category">
+                <option value="americano">Americano</option>
+                <option value="black">Black</option>
+                <option value="mocha">Mocha</option>
+                <option value="turkish">Turkish</option>
+                <option value="ice">Ice-Coffee</option>
+              </select>
+            </label>
+          </form>
+        </section>
       </main>
     </div>
     <script src="./logic.js"></script>
