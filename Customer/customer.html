@@ -12,9 +12,99 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./customer.css" />
+    <!--Font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
     <title>Impresso Store</title>
   </head>
   <body>
+    <!--Start header-nav-bar-->
+    <header class="seller-header">
+      <h1 class="logo">Impresso</h1>
+      <input
+        type="text"
+        name="search"
+        id="search"
+        placeholder="Search by name ..."
+        aria-label="Search bar"
+      />
+      <a href="#cart"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+    </header>
+
+    <!--End header-nav-bar-->
+    <main>
+      <section class="choices">
+        <label for="sorting">Sort by</label>
+        <select name="sort-types" id="sort-types">
+          <option value="category">Category</option>
+          <option value="price">Price</option>
+        </select>
+        <label for="displaying">Show as</label>
+        <select name="display-types" id="display-types">
+          <option value="grid">Grid</option>
+          <option value="list">List</option>
+        </select>
+      </section>
+      <section class="products">
+        <section class="product">
+          <h2 class="name">Americano</h2>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq85Yeu8djaAGvsk1rxT4DNxBHBFEkTCr6FQ&usqp=CAU"
+            alt="Americano"
+            class="image"
+          />
+          <p class="price">Price: $5</p>
+          <p class="details">
+            Caffè Americano is a type of coffee drink prepared by diluting an
+            espresso with hot water, giving it a similar strength to, but
+            different flavor from, traditionally brewed coffee
+          </p>
+          <div class="in-line">
+            <p class="category">Category: Americano</p>
+            <button><i class="fa-solid fa-cart-shopping fa-2xl"></i></button>
+          </div>
+        </section>
+        <section class="product">
+          <h2 class="name">Americano</h2>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq85Yeu8djaAGvsk1rxT4DNxBHBFEkTCr6FQ&usqp=CAU"
+            alt="Americano"
+            class="image"
+          />
+          <p class="price">Price: $5</p>
+          <p class="details">
+            Caffè Americano is a type of coffee drink prepared by diluting an
+            espresso with hot water, giving it a similar strength to, but
+            different flavor from, traditionally brewed coffee
+          </p>
+          <div class="in-line">
+            <p class="category">Category: Americano</p>
+            <button><i class="fa-solid fa-cart-shopping fa-2xl"></i></button>
+          </div>
+        </section>
+        <section class="product">
+          <h2 class="name">Americano</h2>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq85Yeu8djaAGvsk1rxT4DNxBHBFEkTCr6FQ&usqp=CAU"
+            alt="Americano"
+            class="image"
+          />
+          <p class="price">Price: $5</p>
+          <p class="details">
+            Caffè Americano is a type of coffee drink prepared by diluting an
+            espresso with hot water, giving it a similar strength to, but
+            different flavor from, traditionally brewed coffee
+          </p>
+          <div class="in-line">
+            <p class="category">Category: Americano</p>
+            <button><i class="fa-solid fa-cart-shopping fa-2xl"></i></button>
+          </div>
+        </section>
+      </section>
+    </main>
     <script src="./logic.js"></script>
     <script src="./customer.js"></script>
   </body>
