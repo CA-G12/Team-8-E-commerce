@@ -203,6 +203,10 @@ body {
   align-items: center;
 }
 
+.form-section.close {
+  display: none;
+}
+
 .form-section i {
   color: white;
   align-self: flex-end;
