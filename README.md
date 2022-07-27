@@ -46,7 +46,7 @@ You can check the live version out from [HERE](https://ca-g12.github.io/Team-8-E
 - Now right click with your mouse and choose: Open with live server.
 - Happy Coding!🤞
 
-## 📍 Technologies that I used:
+## 📍 Technologies that we used:
 
 - --> HTML5.
 - --> CSS3.
