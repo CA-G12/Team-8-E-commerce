@@ -1,6 +1,6 @@
 
 let productsSection = document.querySelector(".products");
-let productsObjects = localStorage.getItem("productObject");
+let productsObjects = localStorage.getItem("productsObjects");
 const displayAllProducts = (arrayOfProducts) => {
   console.log(arrayOfProducts); 
   JSON.parse(arrayOfProducts).forEach((object) => {
