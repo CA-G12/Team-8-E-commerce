@@ -1,5 +1,3 @@
-
-
 const addToCart = (array, object) => {
   let newArr = [...array]; 
   newArr.push(object)
@@ -12,4 +10,9 @@ const totalPrice =(array)=>{
   })
   return price; 
 }
-module.exports= {addToCart , totalPrice}; 
+const sortingByPrice = (array)=>{
+  let newArr = [...array]; 
+  newArr.sort((a, b) => a.price - b.price)
+  return newArr; 
+}
+module.exports= {addToCart , totalPrice, sortingByPrice}; 
