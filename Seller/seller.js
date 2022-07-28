@@ -1,5 +1,7 @@
+const { addNewProduct } = require("./logic");
+
 // ? Creating the products array of objects.
-let productsObjects = JSON.parse(localStorage.getItem("productObject")) || [];
+let productsObjects = JSON.parse(localStorage.getItem("productsObject")) || [];
 
 // ? Getting add new product button.
 const addProductBtn = document.querySelector(".add-product");
@@ -18,7 +20,6 @@ const priceInput = document.getElementById("price");
 const imageLinkInput = document.getElementById("link");
 const categorySelect = document.getElementById("category");
 
-
 // ? Creating the function which is responsible for adding to local storage.
 function addToLocalStorage(key, source) {
   window.localStorage.setItem(key, JSON.stringify(source));
@@ -27,7 +28,7 @@ function addToLocalStorage(key, source) {
 // ? Create the functions which is responsible for deleting a product.
 function deleteProduct(arr, id) {
   const newArray = deleteFromArray(arr, id);
-  addToLocalStorage("productObject", newArray);
+  addToLocalStorage("productsObject", newArray);
 }
 
 // ? Create the function which is for closing the form section.
@@ -37,20 +38,17 @@ function closeForm() {
 }
 
 // ? Created the function that takes the data from the form and adds it as an object to local storage and array of objects.
-function addNewProduct() {
-  let id = 0;
-  let newObj = {
-    id: id++,
-    name: nameInput.value,
-    details: detailsInput.value,
-    price: priceInput.value,
-    imageLink: imageLinkInput.value,
-    category: categorySelect.value,
-  };
-  
-  productsObjects.push(newObj);
-  addToLocalStorage("productObject", productsObjects);
-}
+let id = 0;
+let newObj = {
+  id: id++,
+  name: nameInput.value,
+  details: detailsInput.value,
+  price: priceInput.value,
+  imageLink: imageLinkInput.value,
+  category: categorySelect.value,
+};
+productsObjects = addNewProduct(productsObjects, newObj, id);
+addToLocalStorage("productsObject", productsObjects);
 
 // ? Adding the function that is responsible for opening the form section.
 function addNewBtnFunc() {
@@ -68,7 +66,7 @@ addProductBtn.addEventListener("click", () => {
 addNewBtn.addEventListener("click", addNewBtnFunc);
 
 // ? Adding the product array of objects to local storage.
-addToLocalStorage("productObject", productsObjects);
+addToLocalStorage("productsObject", productsObjects);
 
 // ? Adding the event listener to the close icon.
 closeIcon.addEventListener("click", closeForm);

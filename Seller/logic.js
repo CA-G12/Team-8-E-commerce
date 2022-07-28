@@ -10,14 +10,14 @@ function deleteFromArray(arr, id) {
   return productsObjects;
 }
 
-console.log(
-  deleteFromArray(
-    [
-      { id: 0, name: "Mustafa Salem" },
-      { id: 1, name: "Nader" },
-    ],
-    0
-  )
-);
+// ? Adding the function for adding a new object to an array of objects
+function addNewProduct(arr, obj, id) {
+  const newArr = [...arr];
+  newArr.push({...obj, id: id});
+  return newArr;
+}
 
-module.exports = deleteFromArray;
+module.exports = {
+  deleteFromArray,
+  addNewProduct,
+};
