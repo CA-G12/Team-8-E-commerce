@@ -202,10 +202,15 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  display: none;
 }
 
 .form-section.close {
   display: none;
+}
+
+.form-section.open {
+  display: flex;
 }
 
 .form-section i {
