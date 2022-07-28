@@ -1,3 +1,4 @@
+const { deleteFromArray, addNewProduct } = require("../Seller/logic");
 const { addToCart, totalPrice, sortingByPrice } = require("../Customer/logic.js");
 
 test("adding to cart", function () {
@@ -47,5 +48,11 @@ describe("Testing the function which is responsible for deleting from an array i
     );
     const expected = [{ id: 1, name: "Nader" }];
     expect(actual).toStrictEqual(expected);
+  });
+});
+
+describe("Testing adding new Product function", () => {
+  it("Should return an array including the the last array with the object", () => {
+    const actual = addNewProduct([{ id: 0 }, { id: 1 }], { id: 2 }, 3);
   });
 });
