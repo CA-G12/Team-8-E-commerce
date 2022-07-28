@@ -1,5 +1,3 @@
-const { addNewProduct } = require("./logic");
-
 // ? Creating the products array of objects.
 let productsObjects = JSON.parse(localStorage.getItem("productsObject")) || [];
 
