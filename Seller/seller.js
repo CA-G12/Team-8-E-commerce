@@ -6,6 +6,9 @@ function addToLocalStorage(key, source) {
   window.localStorage.setItem(key, JSON.stringify(source));
 }
 
+// ? Targeting the add new button.
+const addNewBtn = document.querySelector(".add-product-btn");
+
 // ? Adding the product array of objects to local storage.
 addToLocalStorage("productObject", productsObjects);
 
@@ -21,6 +24,7 @@ const formSection = document.querySelector(".form-section");
 
 // ? Create the function which is for closing the form section.
 function closeForm() {
+  formSection.classList.remove("open");
   formSection.classList.add("close");
 }
 
@@ -58,3 +62,12 @@ addProductBtn.addEventListener("click", () => {
   addNewProduct();
   closeForm();
 });
+
+// ? Adding the function that is responsible for opening the form section.
+function addNewBtnFunc() {
+  formSection.classList.remove("close");
+  formSection.classList.add("open");
+}
+
+// ? Adding add event listener to add new button.
+addNewBtn.addEventListener("click", addNewBtnFunc);
